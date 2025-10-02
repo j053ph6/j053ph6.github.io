@@ -90,3 +90,63 @@ footer{
 footer h2, footer li {
       color: #444444;
 }
+
+@media (max-width: 48rem) {
+
+  .hero {
+    height: 35rem;
+  }
+  .hero h1 {
+    margin: 6rem auto 0;
+    max-width: 90%;
+    font-size: 2.5rem;
+    text-align: center;
+  }
+  .hero p {
+    font-size: 1.5rem;
+  }
+
+  .nav-bar nav {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .nav-bar a {
+    margin-top: 1rem;
+  }
+
+    ul {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+    .flex-container nav {
+    flex-direction: row; 
+    justify-content: center;
+    gap: 1.5rem; 
+  }
+
+  .flex-container nav a {
+    width: auto; 
+  }
+}
+
+@media (max-width: 20rem) {
+
+  .hero {
+    height: 25rem;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+    max-width: 70%;
+  }
+  .hero p {
+    font-size: 1rem;
+  }
+
+
+  h1 { font-size: 2rem; }
+  h2 { font-size: 1.5rem; }
+  a { padding: 1rem; }
+}
