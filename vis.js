@@ -1,6 +1,6 @@
 console.log("script.js loaded");
 
-const svgWidth = 1920;
+const svgWidth = 600;
 const svgHeight = 500;
 const svgRad = 250;
 let circles = document.querySelectorAll("circle");
