@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Youcef Missoum's Visualization Website</title>
+    <meta charset="utf-8">
+    <script src="https://cdn.jsdelivr.net/npm/d3@7"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite-api@5.6.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-tooltip"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+            <script>
+        const options = {
+            config: {
+            // Vega-Lite default configuration
+            },
+            init: (view) => {
+            // initialize tooltip handler
+            view.tooltip(new vegaTooltip.Handler().call);
+            },
+            view: {
+            // view constructor options
+            // remove the loader if you don't want to default to vega-datasets!
+            loader: vega.loader({
+                baseURL: "https://cdn.jsdelivr.net/npm/vega-datasets@2/",
+            }),
+            renderer: "canvas",
+            },
+        };
+
+        // register vega and vega-lite with the API
+        vl.register(vega, vegaLite, options);
+        </script>
+</head>
+<body>
+    <main>
+        <div class="nav-bar">
+            <nav aria-label="navigation">
+                <a href="index.html">Home</a>
+                <a href="visualizations.html">Visualizations</a>
+                <a href="AssignmentThree.html">Assignment Three</a>
+            </nav>
+        </div>
+        <div class="flex-container">
+            <h1>VISUALIZATIONS:</h1>
+            <h2>Visualization 1: Global Sales by Genre and Platform</h2>
+            <div id="vis1"></div>
+            <p>The first visualization depicts a heatmap of sales by genre and platforms. I chose to use a heatmap as it allows the viewer to easily gauge at which genre sold best at which platform. </p>
+            <h2>Visualization 2: Sales Over Time by Platform and Genre</h2>
+            <div id="vis2Genre"></div>
+            <p>The second visualization depicts streamgraphs of sales over time by genre, split into each platform. Combining all four on one visualization would get too cluttered, so I decided to split the graphs for each platform. The Streamgraph allows the viewer to gauge which genre had a significant impact for sales one each platform.</p>
+            <h2>Visualization 3: Regional Sales vs. Platform</h2>
+            <div id="vis3"></div>
+            <p>The third visualization depicts a stacked bar chart of total sales by platform. Each bar is split into four to depict each sales reigon (NA, EU, JP, and Other). I chose stacked bar chart because the size of each split distinguishes which region is a fan of which platform.</p>
+            <h2>Visualization 4: Playstation 2's lifespan by Global Sales and Platform</h2>
+            <div id="vis4"></div>
+            <p>The fourth visualization depicts the lifespan of my favourite console ever: the Playstation 2. This is an area chart that includes all genres and global sales over time. Again, the difference in size allows the viewer to see which platform dominated the playstation 2 market at a given time, and create reasons from it. (For example, how sports took over action as the most popular genre in the later lifespan of the PS2 could explain its longevity.)</p>
+
+        </div>
+    </main>
+    <footer>
+        <h2>Contact Information:</h2>
+        <ul>
+            <li>
+                <a href="https://www.linkedin.com/in/ymisssoum/">Linkedin</a>
+            </li>
+        </ul>
+    </footer>
+    <script type="module" src="/assignmentThree.js"></script>
+</body>
+</html>
